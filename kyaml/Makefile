@@ -3,7 +3,12 @@
 
 .PHONY: generate fix vet fmt test build tidy
 
-all: generate fix vet fmt test build tidy
+GOPATH := $(shell go env GOPATH)
+
+build:
+	go build -v -o $(GOPATH)/bin/kyaml .
+
+all: generate fix vet fmt test lint build tidy
 
 fix:
 	go fix ./...
@@ -18,8 +23,8 @@ tidy:
 	go mod tidy
 
 lint:
-	(which $(go env GOPATH)/bin/golangci-lint || go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.19.1)
-	$(go env GOPATH)/bin/golangci-lint run ./...
+	(which $(GOPATH)/bin/golangci-lint || go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.19.1)
+	$(GOPATH)/bin/golangci-lint run ./...
 
 test:
 	go test -cover ./...
