@@ -4,6 +4,8 @@ go 1.13
 
 require (
 	github.com/davecgh/go-spew v1.1.1
+	github.com/karrick/golinewrap v0.3.0
+	github.com/mitchellh/go-wordwrap v1.0.0
 	github.com/russross/blackfriday v2.0.0+incompatible
 	github.com/russross/blackfriday/v2 v2.0.1
 	github.com/samfoo/ansi v0.0.0-20160124022901-b6bd2ded7189
