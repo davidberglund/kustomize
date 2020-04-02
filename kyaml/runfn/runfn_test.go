@@ -596,6 +596,28 @@ func TestCmd_Execute(t *testing.T) {
 	assert.Contains(t, string(b), "kind: StatefulSet")
 }
 
+func TestCmd_Execute_fn(t *testing.T) {
+	dir := setupTest(t)
+	defer os.RemoveAll(dir)
+
+	// write a test filter to the directory of configuration
+	if !assert.NoError(t, ioutil.WriteFile(
+		filepath.Join(dir, "filter.fn"), []byte(ValueReplacerYAMLData), 0600)) {
+		t.FailNow()
+	}
+
+	instance := RunFns{Path: dir, functionFilterProvider: getFilterProvider(t)}
+	if !assert.NoError(t, instance.Execute()) {
+		t.FailNow()
+	}
+	b, err := ioutil.ReadFile(
+		filepath.Join(dir, "java", "java-deployment.resource.yaml"))
+	if !assert.NoError(t, err) {
+		t.FailNow()
+	}
+	assert.Contains(t, string(b), "kind: StatefulSet")
+}
+
 // TestCmd_Execute_setOutput tests the execution of a filter reading and writing to a dir
 func TestCmd_Execute_setFunctionPaths(t *testing.T) {
 	dir := setupTest(t)

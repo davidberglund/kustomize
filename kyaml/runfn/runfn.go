@@ -126,6 +126,13 @@ func (r RunFns) getFilters(nodes []*yaml.RNode) ([]kio.Filter, error) {
 	}
 	fltrs = append(fltrs, f...)
 
+	// fns from *.fn files
+	f, err = r.getFunctionsFromFn()
+	if err != nil {
+		return nil, err
+	}
+	fltrs = append(fltrs, f...)
+
 	// fns from directories specified on the struct
 	f, err = r.getFunctionsFromFunctionPaths()
 	if err != nil {
@@ -168,6 +175,29 @@ func (r RunFns) getFunctionsFromInput(nodes []*yaml.RNode) ([]kio.Filter, error)
 	buff := &kio.PackageBuffer{}
 	err := kio.Pipeline{
 		Inputs:  []kio.Reader{&kio.PackageBuffer{Nodes: nodes}},
+		Filters: []kio.Filter{&filters.IsReconcilerFilter{}},
+		Outputs: []kio.Writer{buff},
+	}.Execute()
+	if err != nil {
+		return nil, err
+	}
+	sortFns(buff)
+	return r.getFunctionFilters(false, buff.Nodes...)
+}
+
+func (r RunFns) getFunctionsFromFn() ([]kio.Filter, error) {
+	if *r.NoFunctionsFromInput {
+		return nil, nil
+	}
+
+	buff := &kio.PackageBuffer{}
+	err := kio.Pipeline{
+		Inputs: []kio.Reader{
+			kio.LocalPackageReader{
+				PackagePath:    r.Path,
+				MatchFilesGlob: []string{"*.fn"},
+			},
+		},
 		Filters: []kio.Filter{&filters.IsReconcilerFilter{}},
 		Outputs: []kio.Writer{buff},
 	}.Execute()
