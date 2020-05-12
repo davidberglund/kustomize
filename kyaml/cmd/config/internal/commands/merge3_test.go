@@ -10,7 +10,6 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/kustomize/cmd/config/internal/commands"
 	"sigs.k8s.io/kustomize/kyaml/copyutil"
 )
 
@@ -211,7 +210,7 @@ spec:
 	}
 
 	// Perform merge3 with newly created sets
-	r := commands.GetMerge3Runner("")
+	r := GetMerge3Runner("")
 	r.Command.SetArgs([]string{
 		"--ancestor",
 		datadir,

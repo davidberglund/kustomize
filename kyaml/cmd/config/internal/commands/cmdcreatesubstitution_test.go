@@ -12,7 +12,6 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"sigs.k8s.io/kustomize/cmd/config/ext"
-	"sigs.k8s.io/kustomize/cmd/config/internal/commands"
 	"sigs.k8s.io/kustomize/kyaml/openapi"
 )
 
@@ -219,7 +218,7 @@ spec:
 				t.FailNow()
 			}
 
-			runner := commands.NewCreateSubstitutionRunner("")
+			runner := NewCreateSubstitutionRunner("")
 			out := &bytes.Buffer{}
 			runner.Command.SetOut(out)
 			runner.Command.SetArgs(append([]string{r.Name()}, test.args...))

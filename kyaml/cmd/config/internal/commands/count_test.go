@@ -11,7 +11,6 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/kustomize/cmd/config/internal/commands"
 )
 
 func TestCountCommand_files(t *testing.T) {
@@ -60,7 +59,7 @@ spec:
 
 	// fmt the files
 	b := &bytes.Buffer{}
-	r := commands.GetCountRunner("")
+	r := GetCountRunner("")
 	r.Command.SetArgs([]string{d})
 	r.Command.SetOut(b)
 	if !assert.NoError(t, r.Command.Execute()) {

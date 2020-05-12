@@ -9,8 +9,8 @@ package main
 import (
 	"os"
 
-	"sigs.k8s.io/kustomize/cmd/config/complete"
-	"sigs.k8s.io/kustomize/cmd/config/configcobra"
+	"sigs.k8s.io/kustomize/kyaml/cmd/config/complete"
+	"sigs.k8s.io/kustomize/kyaml/cmd/config/configcobra"
 	"sigs.k8s.io/kustomize/kyaml/commandutil"
 )
 

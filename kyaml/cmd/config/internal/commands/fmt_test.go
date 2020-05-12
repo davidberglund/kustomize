@@ -11,7 +11,6 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/kustomize/cmd/config/internal/commands"
 	"sigs.k8s.io/kustomize/kyaml/kio/filters/testyaml"
 )
 
@@ -38,7 +37,7 @@ func TestFmtCommand_files(t *testing.T) {
 	}
 
 	// fmt the files
-	r := commands.GetFmtRunner("")
+	r := GetFmtRunner("")
 	r.Command.SetArgs([]string{f1.Name(), f2.Name()})
 	err = r.Command.Execute()
 	if !assert.NoError(t, err) {
@@ -65,7 +64,7 @@ func TestFmtCommand_files(t *testing.T) {
 
 func TestFmtCommand_stdin(t *testing.T) {
 	out := &bytes.Buffer{}
-	r := commands.GetFmtRunner("")
+	r := GetFmtRunner("")
 	r.Command.SetOut(out)
 	r.Command.SetIn(bytes.NewReader(testyaml.UnformattedYaml1))
 
@@ -100,12 +99,12 @@ func TestFmtCmd_filesAndStdin(t *testing.T) {
 
 	out := &bytes.Buffer{}
 	in := &bytes.Buffer{}
-	r := commands.GetFmtRunner("")
+	r := GetFmtRunner("")
 	r.Command.SetOut(out)
 	r.Command.SetIn(in)
 
 	// fmt the files
-	r = commands.GetFmtRunner("")
+	r = GetFmtRunner("")
 	r.Command.SetArgs([]string{f1.Name(), f2.Name()})
 	err = r.Command.Execute()
 	if !assert.NoError(t, err) {
@@ -141,7 +140,7 @@ func TestFmtCmd_filesAndStdin(t *testing.T) {
 // TestCmd_files verifies the fmt command formats the files
 func TestCmd_failFiles(t *testing.T) {
 	// fmt the files
-	r := commands.GetFmtRunner("")
+	r := GetFmtRunner("")
 	r.Command.SetArgs([]string{"notrealfile"})
 	r.Command.SilenceUsage = true
 	r.Command.SilenceErrors = true
@@ -152,7 +151,7 @@ func TestCmd_failFiles(t *testing.T) {
 // TestCmd_files verifies the fmt command formats the files
 func TestCmd_failFileContents(t *testing.T) {
 	out := &bytes.Buffer{}
-	r := commands.GetFmtRunner("")
+	r := GetFmtRunner("")
 	r.Command.SetOut(out)
 	r.Command.SetIn(strings.NewReader(`{`))
 

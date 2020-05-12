@@ -7,7 +7,6 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"sigs.k8s.io/kustomize/cmd/config/configcobra"
 	"sigs.k8s.io/kustomize/kyaml/commandutil"
 )
 
@@ -21,5 +20,5 @@ func ExampleNewConfigCommand() {
 		Short: "My command.",
 		Long:  `My command.`,
 	}
-	root.AddCommand(configcobra.NewConfigCommand("my-cmd"))
+	root.AddCommand(NewConfigCommand("my-cmd"))
 }

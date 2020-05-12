@@ -11,7 +11,6 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/kustomize/cmd/config/internal/commands"
 )
 
 func TestSinkCommand(t *testing.T) {
@@ -21,7 +20,7 @@ func TestSinkCommand(t *testing.T) {
 	}
 	defer os.RemoveAll(d)
 
-	r := commands.GetSinkRunner("")
+	r := GetSinkRunner("")
 	r.Command.SetIn(bytes.NewBufferString(`apiVersion: config.kubernetes.io/v1alpha1
 kind: ResourceList
 items:
@@ -145,7 +144,7 @@ func TestSinkCommand_Stdout(t *testing.T) {
 
 	// fmt the files
 	out := &bytes.Buffer{}
-	r := commands.GetSinkRunner("")
+	r := GetSinkRunner("")
 	r.Command.SetIn(bytes.NewBufferString(`apiVersion: config.kubernetes.io/v1alpha1
 kind: ResourceList
 items:

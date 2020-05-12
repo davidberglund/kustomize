@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"k8s.io/apimachinery/pkg/api/resource"
+	"sigs.k8s.io/kustomize/cmd/config/internal/commands/quantity"
 	"sigs.k8s.io/kustomize/cmd/config/internal/generateddocs/commands"
 	"sigs.k8s.io/kustomize/kyaml/kio"
 	"sigs.k8s.io/kustomize/kyaml/kio/filters"
@@ -53,11 +53,11 @@ type GrepRunner struct {
 
 func (r *GrepRunner) preRunE(c *cobra.Command, args []string) error {
 	r.GrepFilter.Compare = func(a, b string) (int, error) {
-		qa, err := resource.ParseQuantity(a)
+		qa, err := quantity.ParseQuantity(a)
 		if err != nil {
 			return 0, fmt.Errorf("%s: %v", a, err)
 		}
-		qb, err := resource.ParseQuantity(b)
+		qb, err := quantity.ParseQuantity(b)
 		if err != nil {
 			return 0, err
 		}

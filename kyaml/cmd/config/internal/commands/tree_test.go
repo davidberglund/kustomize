@@ -12,7 +12,6 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/kustomize/cmd/config/internal/commands"
 )
 
 // TestCmd_files verifies fmt reads the files and filters them
@@ -74,7 +73,7 @@ spec:
 
 	// fmt the files
 	b := &bytes.Buffer{}
-	r := commands.GetTreeRunner("")
+	r := GetTreeRunner("")
 	r.Command.SetArgs([]string{d})
 	r.Command.SetOut(b)
 	if !assert.NoError(t, r.Command.Execute()) {
@@ -93,7 +92,7 @@ spec:
 func TestTreeCommand_stdin(t *testing.T) {
 	// fmt the files
 	b := &bytes.Buffer{}
-	r := commands.GetTreeRunner("")
+	r := GetTreeRunner("")
 	r.Command.SetArgs([]string{})
 	r.Command.SetIn(bytes.NewBufferString(`apiVersion: extensions/v1
 kind: Deployment
@@ -256,7 +255,7 @@ spec:
 
 	// fmt the files
 	b := &bytes.Buffer{}
-	r := commands.GetTreeRunner("")
+	r := GetTreeRunner("")
 	r.Command.SetArgs([]string{d, "--include-local"})
 	r.Command.SetOut(b)
 	if !assert.NoError(t, r.Command.Execute()) {
@@ -333,7 +332,7 @@ spec:
 
 	// fmt the files
 	b := &bytes.Buffer{}
-	r := commands.GetTreeRunner("")
+	r := GetTreeRunner("")
 	r.Command.SetArgs([]string{d, "--include-local", "--exclude-non-local"})
 	r.Command.SetOut(b)
 	if !assert.NoError(t, r.Command.Execute()) {

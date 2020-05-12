@@ -11,7 +11,6 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"sigs.k8s.io/kustomize/cmd/config/internal/commands"
 )
 
 func TestSourceCommand(t *testing.T) {
@@ -74,7 +73,7 @@ spec:
 
 	// fmt the files
 	b := &bytes.Buffer{}
-	r := commands.GetSourceRunner("")
+	r := GetSourceRunner("")
 	r.Command.SetArgs([]string{d})
 	r.Command.SetOut(b)
 	if !assert.NoError(t, r.Command.Execute()) {
@@ -164,7 +163,7 @@ spec:
 `)
 
 	out := &bytes.Buffer{}
-	r := commands.GetSourceRunner("")
+	r := GetSourceRunner("")
 	r.Command.SetArgs([]string{})
 	r.Command.SetIn(in)
 	r.Command.SetOut(out)
