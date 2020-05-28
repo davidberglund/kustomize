@@ -12,34 +12,35 @@ linters:
     - bodyclose
     - deadcode
     - depguard
-    - dogsled
+    #    - dogsled
     - dupl
-    - errcheck
-    - gochecknoinits
-    - goconst
-    - gocritic
-    - gocyclo
+    #    - errcheck
+    #    - funlen
+    #    - gochecknoinits
+    #    - goconst
+    #    - gocritic
+    #    - gocyclo
     - gofmt
     - goimports
-    - golint
-#    - gosec
+    #    - golint
+    #    - gosec
     - gosimple
     - govet
     - ineffassign
     - interfacer
-    - lll
+    #    - lll
     - misspell
     - nakedret
-    - scopelint
+    #    - scopelint
     - staticcheck
     - structcheck
-    - stylecheck
+    #    - stylecheck
     - typecheck
     - unconvert
-    - unparam
+    #    - unparam
     - unused
     - varcheck
-    - whitespace
+#    - whitespace
 
 
 linters-settings:
