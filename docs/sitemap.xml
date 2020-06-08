@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/guides/bespoke/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/contributing/howitworks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/installation/source/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/guides/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/contributing/mac/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/guides/offtheshelf/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/installation/binaries/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/installation/homebrew/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/contributing/windows/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/installation/chocolatey/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/releases/</loc>
+    <lastmod>2019-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/contributing/bugs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/guides/plugins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/faq/eschewedfeatures/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/glossary/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/faq/versioningpolicy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/</loc>
+    <lastmod>2019-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/</loc>
+    <lastmod>2019-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/2019/10/24/v3.3.0/</loc>
+    <lastmod>2019-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/2019/09/26/v3.2.1/</loc>
+    <lastmod>2019-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/2019/09/17/v3.2.0/</loc>
+    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/2019/07/26/v3.1.0/</loc>
+    <lastmod>2019-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/2019/07/03/v3.0.0/</loc>
+    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/2019/06/18/v2.1.0/</loc>
+    <lastmod>2019-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/2019/02/05/v2.0.0/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/blog/2018/05/21/v1.0.1/</loc>
+    <lastmod>2018-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/bases/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/guides/plugins/builtins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/commonannotations/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/commonlabels/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/components/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/configmapgenerator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/guides/plugins/execpluginguidedexample/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/generatoroptions/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/guides/plugins/goplugincaveats/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/guides/plugins/gopluginguidedexample/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/images/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/nameprefix/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/namespace/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/namesuffix/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/patches/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/patchesjson6902/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/patchesstrategicmerge/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/replicas/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/resources/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/secretegenerator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubernetes-sigs.github.io/kustomize/api-reference/kustomization/vars/</loc>
+  </url>
+  
+</urlset>
